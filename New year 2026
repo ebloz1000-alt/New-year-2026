@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2026! | Celebrating Together</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0c2461, #1e3799, #4a69bd);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .celebration-container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-celebration {
+            margin-bottom: 30px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .header-celebration h1 {
+            font-size: 4rem;
+            color: #FFD700;
+            text-shadow: 0 0 15px #FFD700, 0 0 30px #FF8C00;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .header-celebration h2 {
+            font-size: 2.5rem;
+            color: #FF8C00;
+            margin-bottom: 20px;
+        }
+
+        .celebration-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .celebration-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .celebration-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .year-2026 {
+            font-size: 7rem;
+            font-weight: 900;
+            color: #FFD700;
+            margin: 30px 0;
+            text-shadow: 0 0 20px #FFD700;
+            position: relative;
+            z-index: 2;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700; }
+            to { text-shadow: 0 0 20px #FFD700, 0 0 40px #FF8C00, 0 0 60px #FF8C00; }
+        }
+
+        .greeting-from {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 30px;
+            font-weight: 600;
+            background: rgba(255, 215, 0, 0.1);
+            padding: 15px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .message-container {
+            text-align: left;
+            margin: 40px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .message-container p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 15px;
+            border-left: 5px solid #FFD700;
+        }
+
+        .celebrate-instruction {
+            background: rgba(255, 140, 0, 0.2) !important;
+            border-left: 5px solid #FF8C00 !important;
+            font-weight: 600;
+        }
+
+        .celebrate-instruction i {
+            color: #FFD700;
+            margin-right: 10px;
+        }
+
+        .celebration-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .celebration-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 120px;
+        }
+
+        .celebration-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .celebration-item:hover .celebration-icon {
+            transform: scale(1.2);
+            background: rgba(255, 215, 0, 0.3);
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        .celebration-label {
+            font-weight: 600;
+            color: #FFD700;
+            font-size: 1.1rem;
+        }
+
+        .celebration-button {
+            background: linear-gradient(to right, #FFD700, #FF8C00);
+            color: #0c2461;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 40px 0 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .celebration-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(255, 140, 0, 0.6);
+            letter-spacing: 2px;
+        }
+
+        .confetti-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: #FFD700;
+            border-radius: 50%;
+            opacity: 0.8;
+        }
+
+        .confetti:nth-child(2n) {
+            background-color: #FF8C00;
+        }
+
+        .confetti:nth-child(3n) {
+            background-color: #4a69bd;
+        }
+
+        .confetti:nth-child(4n) {
+            background-color: #ffffff;
+        }
+
+        .scripture-celebration {
+            font-style: italic;
+            font-size: 1.4rem;
+            margin: 40px 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            border-left: 5px solid #FF8C00;
+            text-align: center;
+        }
+
+        .celebration-message {
+            font-size: 1.4rem;
+            color: #FFD700;
+            margin-top: 20px;
+            font-weight: bold;
+            min-height: 40px;
+            transition: all 0.5s ease;
+        }
+
+        .celebration-animation {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            color: #FFD700;
+            z-index: 10;
+            animation: celebrateText 2s forwards;
+        }
+
+        @keyframes celebrateText {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+            40% { transform: translate(-50%, -50%) scale(1); }
+            80% { opacity: 1; }
+            100% { opacity: 0; transform: translate(-50%, -50%) translateY(-100px); }
+        }
+
+        .footer-celebration {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #FFD700;
+            padding: 20px;
+            border-top: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .header-celebration h1 {
+                font-size: 2.8rem;
+            }
+            
+            .header-celebration h2 {
+                font-size: 2rem;
+            }
+            
+            .year-2026 {
+                font-size: 5rem;
+            }
+            
+            .celebration-card {
+                padding: 30px 20px;
+            }
+            
+            .message-container p {
+                font-size: 1.1rem;
+            }
+            
+            .celebration-button {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+            
+            .celebration-icons {
+                gap: 15px;
+            }
+            
+            .celebration-item {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-celebration h1 {
+                font-size: 2.2rem;
+            }
+            
+            .year-2026 {
+                font-size: 4rem;
+            }
+            
+            .celebration-item {
+                width: 80px;
+            }
+            
+            .celebration-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="celebration-animation" id="celebrationAnimation"></div>
+    
+    <div class="celebration-container">
+        <div class="header-celebration">
+            <h1>HAPPY NEW YEAR!</h1>
+            <h2>Walk of Prayer Ministry</h2>
+        </div>
+        
+        <div class="celebration-card">
+            <!-- Changed from "beloved friends" to "beloved brethren" -->
+            <div class="greeting-from">To All My Beloved Brethren at Walk of Prayer Ministry</div>
+            
+            <div class="year-2026">2026</div>
+            
+            <div class="message-container">
+                <p>My dear brothers and sisters in Christ, as we enter this glorious new year of 2026, I want to wish each and every one of you a year overflowing with God's blessings, joy, and answered prayers!</p>
+                
+                <p>This is a time for celebration! A time to rejoice in God's faithfulness throughout the past year and anticipate the amazing things He has prepared for us in 2026. Let your hearts be filled with gratitude and your voices with praise!</p>
+                
+                <p class="celebrate-instruction">
+                    <i class="fas fa-star"></i> 
+                    <strong>CELEBRATE, CELEBRATE, CELEBRATE!</strong> Rejoice in the Lord always! Gather with your spiritual family, share testimonies of God's goodness, and welcome 2026 with joyful hearts full of expectation!
+                </p>
+                
+                <p>May this new year bring you deeper connections, greater spiritual breakthroughs, and overwhelming joy in your walk with God. Let's make 2026 our most prayerful, powerful, and celebratory year yet!</p>
+            </div>
+            
+            <div class="scripture-celebration">
+                "Rejoice in the Lord always. I will say it again: Rejoice!" - Philippians 4:4
+            </div>
+            
+            <div class="celebration-icons">
+                <div class="celebration-item">
+                    <div class="celebration-icon">
+                        <i class="fas fa-pray"></i>
+                    </div>
+                    <div class="celebration-label">Pray Together</div>
+                </div>
+                
+                <div class="celebration-item">
+                    <div class="celebration-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="celebration-label">Gather & Worship</div>
+                </div>
+                
+                <div class="celebration-item">
+                    <div class="celebration-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="celebration-label">Share Blessings</div>
+                </div>
+                
+                <div class="celebration-item">
+                    <div class="celebration-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="celebration-label">Sing Praises</div>
+                </div>
+                
+                <div class="celebration-item">
+                    <div class="celebration-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="celebration-label">Feast Together</div>
+                </div>
+            </div>
+            
+            <button class="celebration-button" id="celebrateBtn">
+                <i class="fas fa-fireworks"></i> LET'S CELEBRATE! <i class="fas fa-fireworks"></i>
+            </button>
+            
+            <div class="celebration-message" id="celebrationMessage">Click above to celebrate 2026 with your brethren!</div>
+        </div>
+        
+        <div class="footer-celebration">
+            Wishing you a 2026 filled with divine joy, answered prayers, and glorious celebration! 
+            <br>With love and prayers for our Walk of Prayer Ministry family.
+        </div>
+    </div>
+
+    <script>
+        // Create confetti effect
+        function createConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#FFD700', '#FF8C00', '#4a69bd', '#ffffff'];
+            
+            // Clear existing confetti first
+            container.innerHTML = '';
+            
+            for (let i = 0; i < 200; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random position
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.top = `${Math.random() * 100}%`;
+                
+                // Random size
+                const size = Math.random() * 20 + 5;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                
+                // Random color
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Random shape (circle or square)
+                if (Math.random() > 0.5) {
+                    confetti.style.borderRadius = '50%';
+                } else {
+                    confetti.style.borderRadius = '0%';
+                }
+                
+                // Random animation
+                const duration = Math.random() * 3 + 2;
+                confetti.style.animation = `fall ${duration}s linear forwards`;
+                
+                container.appendChild(confetti);
+                
+                // Remove confetti after animation completes
+                setTimeout(() => {
+                    if (confetti.parentNode) {
+                        confetti.remove();
+                    }
+                }, duration * 1000);
+            }
+        }
+        
+        // Add animation style for confetti
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+                100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Celebration messages
+        const celebrationMessages = [
+            "Hallelujah! We're celebrating 2026 with our beloved brethren!",
+            "Rejoicing in the Lord with our Walk of Prayer family! 🎉",
+            "Praise God! The celebration has begun!",
+            "What a joyful time with our spiritual family! 🙌",
+            "Celebrating God's goodness with our beloved brethren! ✨",
+            "Happy New Year! Let's celebrate together! 🥳",
+            "Rejoice! 2026 is here and we're celebrating! 🎊",
+            "Praise the Lord! Let the celebration continue! 🎇"
+        ];
+        
+        // Celebration button functionality
+        document.getElementById('celebrateBtn').addEventListener('click', function() {
+            // Change button text and style temporarily
+            const originalText = this.innerHTML;
+            const originalBackground = this.style.background;
+            const originalColor = this.style.color;
+            
+            // Get random celebration message
+            const randomMessage = celebrationMessages[Math.floor(Math.random() * celebrationMessages.length)];
+            
+            // Update celebration message display
+            const messageElement = document.getElementById('celebrationMessage');
+            messageElement.innerHTML = `<i class="fas fa-star"></i> ${randomMessage} <i class="fas fa-star"></i>`;
+            messageElement.style.color = '#FF8C00';
+            messageElement.style.textShadow = '0 0 10px #FFD700';
+            messageElement.style.transform = 'scale(1.1)';
+            
+            // Show celebration animation text
+            const animationElement = document.getElementById('celebrationAnimation');
+            const animationTexts = ["CELEBRATE!", "REJOICE!", "HALLELUJAH!", "PRAISE GOD!", "2026!"];
+            const randomAnimationText = animationTexts[Math.floor(Math.random() * animationTexts.length)];
+            animationElement.textContent = randomAnimationText;
+            animationElement.style.display = 'block';
+            
+            // Update button
+            this.innerHTML = '<i class="fas fa-check"></i> CELEBRATING! <i class="fas fa-check"></i>';
+            this.style.background = 'linear-gradient(to right, #4a69bd, #1e3799)';
+            this.style.color = '#FFD700';
+            this.disabled = true;
+            
+            // Add massive confetti explosion
+            createConfetti();
+            
+            // Play celebration sound
+            playCelebrationSound();
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.background = originalBackground;
+                this.style.color = originalColor;
+                this.disabled = false;
+                
+                // Reset message animation
+                setTimeout(() => {
+                    messageElement.style.transform = 'scale(1)';
+                    messageElement.style.color = '#FFD700';
+                    messageElement.style.textShadow = 'none';
+                }, 500);
+                
+                // Hide celebration animation
+                animationElement.style.display = 'none';
+            }, 3000);
+        });
+        
+        // Celebration sound function
+        function playCelebrationSound() {
+            try {
+                // Create audio context for celebration sounds
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                
+                // Create multiple oscillators for a more celebratory sound
+                for (let i = 0; i < 3; i++) {
+                    setTimeout(() => {
+                        const oscillator = audioContext.createOscillator();
+                        const gainNode = audioContext.createGain();
+                        
+                        oscillator.connect(gainNode);
+                        gainNode.connect(audioContext.destination);
+                        
+                        // Different frequencies for a chord
+                        const frequencies = [523.25, 659.25, 783.99, 1046.50];
+                        oscillator.frequency.setValueAtTime(frequencies[i % frequencies.length], audioContext.currentTime);
+                        
+                        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.8);
+                        
+                        oscillator.start(audioContext.currentTime);
+                        oscillator.stop(audioContext.currentTime + 0.8);
+                    }, i * 200);
+                }
+            } catch (e) {
+                console.log("Audio not supported or autoplay restricted");
+            }
+        }
+        
+        // Add hover effect to celebration items
+        document.querySelectorAll('.celebration-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.celebration-icon');
+                icon.style.transform = 'scale(1.3) rotate(10deg)';
+                icon.style.boxShadow = '0 0 25px #FFD700';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.celebration-icon');
+                icon.style.transform = 'scale(1)';
+                icon.style.boxShadow = 'none';
+            });
+        });
+        
+        // Add initial confetti on page load
+        window.addEventListener('load', function() {
+            // Small initial confetti burst
+            setTimeout(createConfetti, 1000);
+        });
+    </script>
+</body>
+</html>
